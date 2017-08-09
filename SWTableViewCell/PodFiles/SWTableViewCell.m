@@ -772,6 +772,11 @@ static NSString * const kTableViewPanState = @"state";
     
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.leftUtilityButtonsView.backgroundColor = SKTheme.theme.behindBackgroundColor;
+    self.rightUtilityButtonsView.backgroundColor = SKTheme.theme.behindBackgroundColor;
+}
+
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
